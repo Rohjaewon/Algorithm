@@ -4,7 +4,7 @@
  *  Created on: 2019. 2. 12.
  *      Author: harry
  */
-/*
+
 #include <iostream>
 #include <vector>
 #include <algorithm>
@@ -82,4 +82,4 @@ int main(){
 	}
 	cout << max(0.0, Dist(hi));
 }
-*/
+
