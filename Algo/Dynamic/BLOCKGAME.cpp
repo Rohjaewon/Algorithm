@@ -4,7 +4,7 @@
  *  Created on: 2019. 1. 19.
  *      Author: harry
  */
-/*
+
 #include <iostream>
 #include <vector>
 using namespace std;
@@ -154,7 +154,7 @@ int main(){
 		cout << "WINNING" << endl;
 	else cout << "LOSING" << endl;
 
-}*/
+}
 
 
 
