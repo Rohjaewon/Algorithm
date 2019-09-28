@@ -4,7 +4,7 @@
  *  Created on: 2018. 10. 28.
  *      Author: harry
  */
-/*
+
 #include <iostream>
 using namespace std;
 int n, k;//n은 만들어야할 숫자, k는  1~k까지의 단위를 의미
@@ -35,4 +35,4 @@ int main(){
 	cin >> n >> k;
 	cout << C(n, k) << endl;
 }
-*/
+
