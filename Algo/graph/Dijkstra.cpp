@@ -4,7 +4,7 @@
  *  Created on: 2018. 12. 14.
  *      Author: harry
  */
-/*
+
 #include <iostream>
 #include <vector>
 #include <stack>
@@ -81,6 +81,6 @@ int main() {
 	cin >> v1 >> v2;
 	Dijkstra(G, n, v1, v2, visited);
 }
-*/
+
 
 
