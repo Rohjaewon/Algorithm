@@ -4,7 +4,7 @@
  *  Created on: 2019. 2. 7.
  *      Author: harry
  */
-/*
+
 #include <iostream>
 #include <cmath>
 #include <vector>
@@ -34,4 +34,4 @@ int main(){
 			cnt++;
 	}
 	cout << cnt;
-}*/
+}
