@@ -4,7 +4,7 @@
  *  Created on: 2018. 10. 18.
  *      Author: harry
  */
-/*
+
 #include <iostream>
 #include <deque>
 #include <math.h>
@@ -83,5 +83,5 @@ int main(){
 
 }
 
-*/
+
 
