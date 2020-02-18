@@ -4,7 +4,7 @@
  *  Created on: 2019. 2. 11.
  *      Author: harry
  */
-/*
+
 #include <iostream>
 #include <vector>
 #include <algorithm>
@@ -60,6 +60,6 @@ int main(){
 			cnt++;
 	cout << cnt << endl;
 }
-*/
+
 
 
