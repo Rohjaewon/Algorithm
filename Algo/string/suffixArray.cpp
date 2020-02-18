@@ -4,7 +4,7 @@
  *  Created on: 2019. 2. 18.
  *      Author: harry
  */
-/*
+
 #include <iostream>
 #include <vector>
 #include <algorithm>
@@ -56,7 +56,7 @@ int main(){
 	for(int i =0; i<n; i++){
 		cout << s.substr(arr[i]) << endl;
 	}
-}*/
+}
 
 
 
