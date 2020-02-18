@@ -4,7 +4,7 @@
  *  Created on: 2019. 2. 25.
  *      Author: harry
  */
-/*
+
 #include <iostream>
 #include <vector>
 #include <algorithm>
@@ -49,7 +49,7 @@ typedef struct RNG{
 		return update(index, newVal, 1, 0, n-1);
 	}
 }RNG;
-*/
+
 
 
 
