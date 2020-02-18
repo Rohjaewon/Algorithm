@@ -4,7 +4,7 @@
  *  Created on: 2018. 12. 15.
  *      Author: harry
  */
-/*
+
 #include <iostream>
 #include <vector>
 #include <stack>
@@ -71,4 +71,4 @@ int main() {
 	DFS(adList,0,n,visited);
 	LongestWay(adList,n, 0, 6);
 }
-*/
+
