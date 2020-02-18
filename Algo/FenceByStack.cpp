@@ -4,7 +4,7 @@
  *  Created on: 2019. 2. 10.
  *      Author: harry
  */
-/*
+
 #include <iostream>
 #include <stack>
 #include <vector>
@@ -41,6 +41,6 @@ int main(){
 		hi.push_back(temp);
 	}
 	cout << MaxFence();
-}*/
+}
 
 
