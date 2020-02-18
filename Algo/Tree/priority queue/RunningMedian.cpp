@@ -4,7 +4,7 @@
  *  Created on: 2019. 2. 25.
  *      Author: harry
  */
-/*
+
 #include <iostream>
 #include <queue>
 #include <vector>
@@ -53,5 +53,5 @@ int main(){
 		//A[i] = getnum(A[i-1], a, b);
 	}
 	GetMid(A);
-}*/
+}
 
