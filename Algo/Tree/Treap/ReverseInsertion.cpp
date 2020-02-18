@@ -4,7 +4,7 @@
  *  Created on: 2019. 2. 25.
  *      Author: harry
  */
-/*
+
 #include <iostream>
 #include <vector>
 #include <stack>
@@ -140,7 +140,7 @@ int main(){
 		cout << S.top() << " ";
 		S.pop();
 	}
-}*/
+}
 
 
 
