@@ -4,7 +4,7 @@
  *  Created on: 2019. 2. 10.
  *      Author: harry
  */
-/*
+
 #include <iostream>
 #include <vector>
 using namespace std;
@@ -35,6 +35,6 @@ int main(){
 		cout << jo[i] << " ";
 	return 0;
 }
-*/
+
 
 
