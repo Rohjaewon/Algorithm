@@ -4,7 +4,7 @@
  *  Created on: 2018. 12. 18.
  *      Author: harry
  */
-/*
+
 #include <iostream>
 #include <vector>
 #include <queue>
@@ -98,4 +98,4 @@ int main() {
 	BFS(maze, visited, n, m, start, end);
 	return 0;
 }
-*/
+
