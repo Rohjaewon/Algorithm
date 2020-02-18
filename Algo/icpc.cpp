@@ -4,7 +4,7 @@
  *  Created on: 2018. 12. 27.
  *      Author: harry
  */
-/*
+
 #include <iostream>
 #include <vector>
 #include <time.h>
@@ -56,8 +56,8 @@ using namespace std;
  bunmo++;
  }
  }
- */
-/*
+ 
+
 typedef struct point {
 	int x=0;
 	int y=0;
@@ -103,8 +103,8 @@ int main() {
 	}
 	cout << Board[index].x << " " << Board[index].y << " " << Board[index2].x
 			<< " " << Board[index2].y << endl;
-}*/
-/*
+}
+
  typedef struct node {
  int v;
  int w;
@@ -140,4 +140,4 @@ int main() {
  adlist[i] = ptr2;
  }
  }
- */
+ 
