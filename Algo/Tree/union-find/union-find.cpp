@@ -4,7 +4,7 @@
  *  Created on: 2019. 2. 25.
  *      Author: harry
  */
-/*
+
 #include <iostream>
 #include <vector>
 #include <algorithm>
@@ -28,7 +28,7 @@ typedef struct UF{
 		if(rank[u] == rank[v])
 			rank[v]++;
 	}
-} UF;*/
+} UF;
 
 
 
