@@ -4,12 +4,12 @@
  *  Created on: 2018. 12. 31.
  *      Author: harry
  */
-//#include <iostream>
-//#include <algorithm>
-//#include <vector>
-//#include <stack>
-//using namespace std;
-/*
+#include <iostream>
+#include <algorithm>
+#include <vector>
+#include <stack>
+using namespace std;
+
 int main(){
 	int n; cin >> n;
 	vector<int> arr(n);
@@ -97,5 +97,5 @@ int main(){
 	}
 	cout << cnt2 << endl;
 }
-*/
+
 
