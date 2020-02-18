@@ -4,7 +4,7 @@
  *  Created on: 2018. 10. 15.
  *      Author: harry
  */
-/*
+
 #include <iostream>
 #include <time.h>
 using namespace std;
@@ -72,8 +72,8 @@ int main(){
 	cout << endl;
 	return 0;
 }
-*/
-/*
+
+
 #include <iostream>
 #include <time.h>
 using namespace std;
@@ -137,7 +137,7 @@ int main(){
 
 	return 0;
 }
-*/
+
 
 
 
