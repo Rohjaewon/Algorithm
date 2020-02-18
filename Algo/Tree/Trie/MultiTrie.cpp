@@ -4,7 +4,7 @@
  *  Created on: 2019. 3. 2.
  *      Author: harry
  */
-/*
+
 #include <iostream>
 #include <algorithm>
 #include <vector>
@@ -121,4 +121,4 @@ int main(){
 		cout << answer[i].first << " " << answer[i].second << endl;
 	return 0;
 }
-*/
+
