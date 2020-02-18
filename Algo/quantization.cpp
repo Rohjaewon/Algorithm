@@ -4,7 +4,7 @@
  *  Created on: 2019. 1. 3.
  *      Author: harry
  */
-/*
+
 #include <iostream>
 #include <algorithm>
 #include <vector>
@@ -58,6 +58,6 @@ int main(){
 	for(int i =0; i<MAX; i++)
 		cache[i] = INF;
 }
-*/
+
 
 
