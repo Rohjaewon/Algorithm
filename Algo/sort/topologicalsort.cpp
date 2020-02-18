@@ -4,7 +4,7 @@
  *  Created on: 2018. 12. 15.
  *      Author: harry
  */
-/*
+
 #include <iostream>
 #include <stack>
 #include <queue>
@@ -103,6 +103,6 @@ int main(){
 			S.pop();
 		}
 }
-*/
+
 
 
