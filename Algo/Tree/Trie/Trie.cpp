@@ -4,7 +4,7 @@
  *  Created on: 2019. 2. 25.
  *      Author: harry
  */
-/*
+
 #include <iostream>
 #include <algorithm>
 #include <vector>
@@ -46,5 +46,5 @@ typedef struct trie{
 	}
 
 } trie;
-*/
+
 
