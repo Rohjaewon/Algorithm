@@ -4,7 +4,7 @@
  *  Created on: 2019. 2. 19.
  *      Author: harry
  */
-/*
+
 #include <iostream>
 #include <vector>
 #include <algorithm>
@@ -92,6 +92,6 @@ int main(){
 	}
 	cout << maxnum;
 }
-*/
+
 
 
