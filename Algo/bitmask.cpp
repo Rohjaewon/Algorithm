@@ -5,11 +5,11 @@
  *      Author: harry
  */
 
-//#include <iostream>
-//#include <vector>
-//#include <stack>
-//using namespace std;
-/*
+#include <iostream>
+#include <vector>
+#include <stack>
+using namespace std;
+
 void print(int bomb){
 	stack<int> S;
 	while(bomb != 0){
@@ -57,9 +57,9 @@ int main(){
 			cout << endl;
 		}
 	}
-}*/
+}
 
-/*
+
 int main() {
 	int N, K, M, L;
 	cin >> N >> K >> M >> L;
@@ -115,4 +115,4 @@ int main() {
 		cout << "IMPOSSIBLE" << endl;
 }
 
-*/
+
