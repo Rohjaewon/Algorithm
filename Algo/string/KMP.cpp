@@ -4,7 +4,7 @@
  *  Created on: 2019. 2. 10.
  *      Author: harry
  */
-/*
+
 #include <iostream>
 #include <vector>
 #include <string>
@@ -64,4 +64,4 @@ int main(){
 		cout << answer[i] << " ";
 	return 0;
 }
-*/
+
