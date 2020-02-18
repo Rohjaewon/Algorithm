@@ -4,7 +4,7 @@
  *  Created on: 2019. 2. 25.
  *      Author: harry
  */
-/*
+
 #include <iostream>
 #include <vector>
 using namespace std;
@@ -27,6 +27,6 @@ typedef struct fenwick{
 		pos += (pos&-pos);
 	}
 }fenwick;
-*/
+
 
 
