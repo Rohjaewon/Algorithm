@@ -4,7 +4,7 @@
  *  Created on: 2018. 12. 6.
  *      Author: harry
  */
-/*
+
 #include <iostream>
 using namespace std;
 
@@ -125,5 +125,5 @@ int main(){
 	cout << smallest << endl;
 	return 0;
 }
-*/
+
 
