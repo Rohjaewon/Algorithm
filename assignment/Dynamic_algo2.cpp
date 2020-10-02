@@ -4,7 +4,6 @@
  *  Created on: 2018. 10. 28.
  *      Ajthor: harry
  */
-/*
 #include <iostream>
 using namespace std;
 int n;
@@ -65,7 +64,7 @@ int main() {
 	cout << Count(C, M) << endl;
 	delete[]C;
 	return 0;
-}*/
+}
 
 
 

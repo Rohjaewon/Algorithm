@@ -4,7 +4,6 @@
  *  Created on: 2018. 11. 2.
  *      Author: harry
  */
-/*
 #include <iostream>
 #include <vector>
 #include <time.h>
@@ -41,7 +40,6 @@ int main(){
 	cout << endl;
 	cout << serial(arr);
 }
-*/
 
 
 

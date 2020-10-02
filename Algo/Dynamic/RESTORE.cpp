@@ -4,7 +4,6 @@
  *  Created on: 2019. 1. 15.
  *      Author: harry
  */
-/*
 #include <iostream>
 #include <string>
 #include <vector>
@@ -69,6 +68,6 @@ int main(){
 	picked[index]=true;
 
 }
-*/
+
 
 

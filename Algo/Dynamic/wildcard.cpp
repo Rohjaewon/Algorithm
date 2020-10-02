@@ -4,7 +4,6 @@
  *  Created on: 2019. 1. 3.
  *      Author: harry
  */
-/*
 #include <iostream>
 #include <algorithm>
 #include <string>
@@ -61,7 +60,6 @@ int main(){
 		cout << answer[i] << " ";
 	}
 }
-*/
 
 
 

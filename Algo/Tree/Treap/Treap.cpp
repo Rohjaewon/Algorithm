@@ -4,7 +4,6 @@
  *  Created on: 2019. 2. 18.
  *      Author: harry
  */
-/*
 #include <iostream>
 #include <stdlib.h>
 #include <time.h>
@@ -139,7 +138,7 @@ int main(){
 	cin >> x;
 	cout << "x보다 작은 숫자의 개수 : " << countLess(root, x);
 	return 0;
-}*/
+}
 
 
 

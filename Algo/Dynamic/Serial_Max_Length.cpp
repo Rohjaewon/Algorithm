@@ -4,7 +4,6 @@
  *  Created on: 2018. 11. 12.
  *      Author: harry
  */
-/*
 #include <iostream>
 #include <algorithm>
 using namespace std;
@@ -57,7 +56,6 @@ int main(){
 	}
 	cout << LIS(board, length, n);
 }
-*/
 
 
 

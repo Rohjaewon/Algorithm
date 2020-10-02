@@ -4,7 +4,6 @@
  *  Created on: 2019. 1. 19.
  *      Author: harry
  */
-/*
 #include <iostream>
 #include <vector>
 #include <algorithm>
@@ -45,7 +44,6 @@ int main(){
 	cout << canwin(0, n-1);
 	return 0;
 }
-*/
 
 
 

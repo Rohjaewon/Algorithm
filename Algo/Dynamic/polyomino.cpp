@@ -4,7 +4,6 @@
  *  Created on: 2019. 1. 8.
  *      Author: harry
  */
-/*
 #include <iostream>
 #include <vector>
 using namespace std;
@@ -42,7 +41,7 @@ int main() {
 		sum %= mod;
 	}
 	cout << sum << endl;
-}*/
+}
 /*
 #include <iostream>
 using namespace std;

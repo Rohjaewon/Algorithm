@@ -4,7 +4,6 @@
  *  Created on: 2019. 1. 2.
  *      Author: harry
  */
-/*
 #include <iostream>
 #include <string>
 using namespace std;
@@ -74,7 +73,7 @@ int main(){
 		for(int j = 0; j<MAX; j++)
 			cache[i][j] = INF;
 	cout << answer(0, size-1, pi) << endl;
-}*/
+}
 /*
  * pi.cpp
  *

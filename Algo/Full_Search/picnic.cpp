@@ -4,7 +4,6 @@
  *  Created on: 2019. 1. 12.
  *      Author: harry
  */
-/*
 #include <iostream>
 #include <vector>
 
@@ -52,6 +51,5 @@ int main(){
 	make_pair(f_pair, num, picked);
 	cout << cnt;
 }
-*/
 
 

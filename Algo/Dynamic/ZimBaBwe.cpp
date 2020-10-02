@@ -4,7 +4,6 @@
  *  Created on: 2019. 1. 11.
  *      Author: harry
  */
-/*
 #include <iostream>
 #include <vector>
 #include <string>
@@ -66,5 +65,4 @@ int main(){
 	cout << count << endl;
 	cout << (end-start)/CLOCKS_PER_SEC << endl;
 }
-*/
 

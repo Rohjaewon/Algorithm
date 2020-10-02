@@ -4,7 +4,6 @@
  *  Created on: 2018. 9. 26.
  *      Author: harry
  */
-/*
 #include <iostream>
 #include <vector>
 #include <algorithm>
@@ -74,7 +73,6 @@ int main() {
 	cout << minlength << " " << minNum<< endl;
 	return 0;
 }
-*/
 
 
 

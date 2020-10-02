@@ -4,7 +4,6 @@
  *  Created on: 2018. 10. 30.
  *      Author: harry
  */
-/*
 #include <string>
 #include <vector>
 #include <iostream>
@@ -41,4 +40,3 @@ int main()
     	cout << arr[i] << " ";
     cout << endl;
 }
-*/

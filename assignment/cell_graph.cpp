@@ -9,7 +9,6 @@
 #include <vector>
 #include <time.h>
 using namespace std;
-/*
 int n;
 
 void DFS(vector<vector<int> > adList, int v, vector<int>& visited, int& cnt){
@@ -79,7 +78,6 @@ int main(){
 	}
 	cout << largestlo << " " << largest << endl;
 }
-*/
 /*
 #include <iostream>
 using namespace std;

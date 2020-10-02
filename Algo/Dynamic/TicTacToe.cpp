@@ -4,7 +4,6 @@
  *  Created on: 2019. 1. 16.
  *      Author: harry
  */
-/*
 #include <iostream>
 #include <vector>
 #include <algorithm>
@@ -96,6 +95,5 @@ int main(){
 	}
 
 }
-*/
 
 

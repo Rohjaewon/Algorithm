@@ -4,7 +4,6 @@
  *  Created on: 2018. 10. 28.
  *      Author: harry
  */
-/*
 #include <iostream>
 #include <algorithm>
 
@@ -74,4 +73,3 @@ int main() {
 	delete[] arr;
 	return 0;
 }
-*/

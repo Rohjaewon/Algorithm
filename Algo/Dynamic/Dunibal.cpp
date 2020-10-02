@@ -4,7 +4,6 @@
  *  Created on: 2019. 1. 13.
  *      Author: harry
  */
-/*
 #include <iostream>
 #include <vector>
 #include <queue>
@@ -63,7 +62,7 @@ int main(){
 	for(int i =0; i< num; i++)
 		cout << answer[i] << " ";
 	return 0;
-}*/
+}
 
 
 

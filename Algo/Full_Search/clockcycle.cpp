@@ -4,7 +4,6 @@
  *  Created on: 2019. 1. 11.
  *      Author: harry
  */
-/*
 #include <iostream>
 #include <algorithm>
 #include <vector>
@@ -101,5 +100,4 @@ int main(){
 	}
 	cout << cycle(clock, t_switch, 0);
 }
-*/
 

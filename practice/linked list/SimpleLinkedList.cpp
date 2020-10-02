@@ -4,7 +4,6 @@
  *  Created on: 2018. 3. 30.
  *      Author: harry
  */
-/*
 #include "SimpleLinkedList.h"
 #include <iostream>
 using namespace std;
@@ -83,4 +82,3 @@ void SimpleLinkedList::printAll() const
 		temp = temp->next;
 	}
 }
-*/

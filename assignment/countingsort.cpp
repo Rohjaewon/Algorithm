@@ -4,7 +4,6 @@
  *  Created on: 2018. 10. 28.
  *      Author: harry
  */
-/*
 #include <iostream>
 using namespace std;
 int n = 0; //배열 크기
@@ -56,4 +55,3 @@ int main() {
 		Csort(arr);
 		cout << maxsum(arr);
 }
-*/

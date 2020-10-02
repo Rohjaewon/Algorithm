@@ -4,7 +4,6 @@
  *  Created on: 2019. 1. 14.
  *      Author: harry
  */
-/*
 #include <iostream>
 #include <vector>
 #include <string>
@@ -44,6 +43,6 @@ int main(){
 	else
 		answer(dragon, 2, size/2);
 	return 0;
-}*/
+}
 
 

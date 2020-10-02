@@ -4,7 +4,6 @@
  *  Created on: 2019. 1. 14.
  *      Author: harry
  */
-/*
 #include <iostream>
 #include <vector>
 #include <algorithm>
@@ -120,6 +119,6 @@ int main(){
 	cout << endl;
 	cout<< "답 : " << L[k-1] << endl;
 }
-*/
+
 
 
