@@ -1,65 +1,45 @@
-/*
- * wildcard.cpp
- *
- *  Created on: 2019. 1. 3.
- *      Author: harry
- */
 #include <iostream>
-#include <algorithm>
-#include <string>
 #include <vector>
+#include <string>
+#include <algorithm>
+
 using namespace std;
-const int MAX = 100;
-int cache[MAX][MAX];
-bool Iswildcard(string w, string s, int w_ptr, int s_ptr){
-	int w_size = w.size(), s_size = s.size();
-	cout << s[s_ptr] << "," << w[w_ptr] << endl;
-	if (s_ptr < s_size && w_ptr < w_size &&
-				(s[s_ptr] == '?' || s[s_ptr] == w[w_ptr])){
-			s_ptr++; w_ptr++;
-			return Iswildcard(w,s,w_ptr,s_ptr);
-	}
-	if(s_ptr == s_size){
-		if(w_ptr == w_size)
-			return 1;
-		else return 0;
-	}
 
-	if(s[s_ptr] == '*'){
-		if((w_ptr < w_size && Iswildcard(w,s,w_ptr+1, s_ptr)) || Iswildcard(w,s,w_ptr, s_ptr+1)){
-			return 1;
-		}
-	}
-	return 0;
-}
+vector<vector<int>> cache(101, vector<int>(101, -1));
 
-vector<string> wildcard(vector<string> s, string str, int n){
-	vector<string> answer;
-	for(int i =0; i<n; i++){
-		if(Iswildcard(s[i], str, 0, 0))
-			answer.push_back(s[i]);
-	}
-	return answer;
+bool solution(string a, string b, int aIdx, int bIdx){
+    //cout << aIdx << " " << bIdx << endl;
+    int& ret = cache[aIdx][bIdx];
+    if(ret != -1)
+        return ret;
+    if(bIdx == b.size()){
+        if(aIdx == a.size() || (aIdx == a.size() -1 && a[aIdx] == '*')){
+            return ret = true;
+        } 
+        else return ret = false;
+    }
+    if(a[aIdx] != '*'){
+        if(a[aIdx] != '?' && a[aIdx] != b[bIdx])
+            return ret = false;
+        return ret = solution(a, b, aIdx+1, bIdx+1);
+    } else{
+        return ret = solution(a, b, aIdx+1, bIdx) || solution(a, b, aIdx, bIdx+1);
+    }
 }
 
 int main(){
-	string str;
-	cin >> str;
-	int n; cin >> n;
-	vector<string> s(n);
-	for(int i =0; i<n; i++){
-		string s1; cin >> s1;
-		s[i] = s1;
-	}
-	for(int i =0; i<MAX; i++){
-		for(int j = 0; j<MAX; j++)
-			cache[i][j] = -1;
-	}
-	vector<string> answer = wildcard(s, str, n);
-	for(unsigned int i = 0; i< answer.size(); i++){
-		cout << answer[i] << " ";
-	}
+    int n;
+    string wildcard;
+    cin >> wildcard;
+    cin >> n;
+    vector<string> targets(n);
+    for(int i = 0; i < n; i++){
+        cin >> targets[i];
+    }
+    cout << "------------" << endl;
+    for(int i = 0; i < n; i++){
+        if(solution(wildcard, targets[i], 0, 0))
+            cout << targets[i] << endl;
+        fill(cache.begin(), cache.end(), vector<int>(101, -1));
+    }
 }
-
-
-

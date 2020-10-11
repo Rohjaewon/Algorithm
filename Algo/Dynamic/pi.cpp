@@ -1,159 +1,81 @@
-/*
- * pi.cpp
- *
- *  Created on: 2019. 1. 2.
- *      Author: harry
- */
 #include <iostream>
+#include <vector>
 #include <string>
+#include <algorithm>
 using namespace std;
-const int MAX = 10002;
-const int INF = 987654321;
-int cache[MAX][MAX];
+const int POSINF = numeric_limits<int>::max();
+int n;
+string number;
+vector<int> cache(10001, POSINF);
+int howHard(string sub){
+    bool dif1 = true, dif2 = true, dif4 = true, dif5 = true, dif10 = true;
+    int num1 = -1;
+    for(int i = 0; i < sub.size(); i++){
+        int num = sub[i] - '0';
+        if(i == 0) num1 = num;
+        else if(num1 != num) {dif1 = false; break;}
+    } if(dif1) return 1;
 
-int min(int left, int mid, int right){
-	if(left <= mid && left <= right)
-		return left;
-	if(mid <= left && mid <= right)
-		return mid;
-	else// (right < left && right < mid)
-		return right;
+    int before = -1, updown = -1;
+    for(int i = 0; i < sub.size(); i++){
+        int num = sub[i] - '0';
+        if(before != -1){
+            if(updown == -1) {updown = num - before;}
+            if((updown != 1 && updown != -1) || (num - before != updown)){
+                dif2 = false;
+                break;
+            }
+        }
+        before = num;
+    } if(dif2) return 2;
+    int first = -1, second = -1;
+    for(int i = 0; i < sub.size(); i++){
+        int num = sub[i] - '0';
+        if(first == -1){first = num; continue;}
+        else if(second == -1){ second = num; continue;}
+        if(i % 2 == 0){
+            if(first != num){
+                dif4 = false;
+                break;
+            }
+        } else{
+            if(second != num){
+                dif4 = false;
+                break;
+            }
+        }
+    } if(dif4) return 4;
+
+    int gap = -1, beforeN = -1;
+    for(int i = 0; i < sub.size(); i++){
+        int num = sub[i] - '0';
+        if(beforeN != -1){
+            if(gap == -1) {gap = num - beforeN; continue;}
+            if(gap != (num - beforeN)){
+                dif5 = false;
+                break;
+            }
+        }
+        beforeN = num;
+    } if(dif5) return 5;
+    return 10;
 }
 
-int check(string str){
-	int size = str.size();
-	if(size < 3)
-		return 10;
-	//난이도 1
-	bool diff1 = true;
-	for(int i =01; i< size; i++)
-		if(str[i] != str[i-1])
-			diff1 = false;
-	if(diff1) return 1;
-	//등차수열 판별
-	bool equaldiff = true;
-	int d = str[1]-str[0];
-	for(int i = 2; i<size; i++){
-		if(str[i]-str[i-1] != d)
-			equaldiff = false;
-	}
-	if(equaldiff){//등차수열 일 때
-		if(d == 1 || d == -1) // 단조 증가 또는 감소일 때
-			return 2;
-		else return 5; // 그냥 등차수열일 때
-	}
-	//난이도 4
-	bool diff4 = true;
-	for(int i =2; i<size; i++){
-		if(str[i] != str[i%2])
-			diff4 = false;
-	}if(diff4) return 4;
-
-	return 10;
-
-}
-
-int answer (int start, int end, string str){
-	int& ret = cache[start][end];
-	if(start > end)
-		return 0;
-	if(ret != INF) return ret;
-	else{
-			ret = min(ret, check(str.substr(start, 3))+answer(start+3, end, str));
-			ret = min(ret, check(str.substr(start, 4))+answer(start+4, end, str));
-			ret = min(ret, check(str.substr(start, 5))+answer(start+5, end, str));
-		return ret;
-	}
+int dif(int cur){
+    int left = number.size() - cur;
+    if(left > 0 && left <= 2) return 10;
+    else if (left == 0) return 0;
+    int& ret = cache[cur];
+    if(ret != POSINF) return ret;
+    for(int sub = 3; sub <= 5; sub++){
+        if(cur + sub <= number.size()){
+            ret = min(ret, dif(cur+sub)+howHard(number.substr(cur, sub)));
+        }
+    }
+    return ret;
 }
 
 int main(){
-	string pi; cin >> pi;
-	int size = pi.size();
-	for(int i =0; i< MAX; i++)
-		for(int j = 0; j<MAX; j++)
-			cache[i][j] = INF;
-	cout << answer(0, size-1, pi) << endl;
+    cin >> number;
+    cout << dif(0) << endl;
 }
-/*
- * pi.cpp
- *
- *  Created on: 2019. 1. 2.
- *      Author: harry
- */
-/*
-#include <iostream>
-#include <string>
-using namespace std;
-const int MAX = 10002;
-const int INF = 987654321;
-int cache[MAX];
-
-int min(int left, int right){
-	if(left < right)
-		return left;
-	else return right;
-}
-
-int check(string str){
-	int size = str.size();
-	if(size < 3)
-		return 10;
-	//난이도 1
-	bool diff1 = true;
-	for(int i =01; i< size; i++)
-		if(str[i] != str[i-1])
-			diff1 = false;
-	if(diff1) return 1;
-	//등차수열 판별
-	bool equaldiff = true;
-	int d = str[1]-str[0];
-	for(int i = 2; i<size; i++){
-		if(str[i]-str[i-1] != d)
-			equaldiff = false;
-	}
-	if(equaldiff){//등차수열 일 때
-		if(d == 1 || d == -1) // 단조 증가 또는 감소일 때
-			return 2;
-		else return 5; // 그냥 등차수열일 때
-	}
-	//난이도 4
-	bool diff4 = true;
-	for(int i =2; i<size; i++){
-		if(str[i] != str[i%2])
-			diff4 = false;
-	}if(diff4) return 4;
-
-	return 10;
-
-}
-
-int answer (int start, string str){
-	int& ret = cache[start];
-	int size = str.size();
-	if(start >= size || size < 3)
-		return 0;
-	if(ret != INF) return ret;
-	else{
-		for(int cut = 3; cut <= 5; cut++){
-			//cout << str.substr(start, cut) << endl;
-			//cout << check(str.substr(start, cut)) << endl;
-			ret = min(ret, check(str.substr(start, cut))+answer(start+cut, str));
-		}
-		return ret;
-	}
-}
-
-int main(){
-	for (int i = 0; i < 50; i++) {
-		string pi;
-		cin >> pi;
-		for (int i = 0; i < MAX; i++)
-			cache[i] = INF;
-		cout << answer(0, pi) << endl;
-	}
-}
-*/
-
-
-
-
