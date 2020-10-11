@@ -46,7 +46,7 @@ int main(){
 	}
 	cout << "최소 구간  : " << index2+1 << "~" << index << endl;
 }
-*/
+
 /*
 typedef struct point{
 	int left = -1;
