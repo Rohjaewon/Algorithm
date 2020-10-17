@@ -7,18 +7,21 @@ int N = -1, d = -1, s = -1;
 int n;
 vector<double> village(52, 0.0);
 vector<double> connected(52, 0);
-vector<vector<int>> path(52, vector<int>(52, 0));
+vector<vector<int> >  path(52, vector<int>(52, 0));
+vector<vector<double> > cache(52, vector<double>(102, -0.5));
 
-void dunibal(int start, int d, double prob){
-	if(d == 0){
-		village[start] += prob;
-		return;
-	}
-	for(int i = 0; i < N; i++){
-		if(path[start][i] == 1){
-			dunibal(i, d-1, prob * (1 / connected[start]));
+double dunibal(int here, int d){ //d일 째에 here에 있을 확률 = 전날 there들에서 here로 올 확률을 다 더한 값
+	if(d == 0)
+		return here == s ? 1.0 : 0.0;
+	double& ret = cache[here][d];
+	if(ret != -0.5) return ret;
+	ret = 0.0;
+	for(int i = 0; i < N; i++){ // 전날의 there = i
+		if(path[here][i] == 1){
+			ret += dunibal(i, d-1) / connected[i];
 		}
 	}
+	return ret;
 }
 
 int main(){
@@ -40,8 +43,7 @@ int main(){
 		}
 		connected[i] = cnt;
 	}
-	dunibal(s, d, 1);
-	for(int i = 0; i < n; i++){
-		cout << village[dist[i]] << " ";
+	for(int i = 0; i < dist.size(); i++){
+		cout << dunibal(dist[i], d) << " ";
 	} cout << endl;
 }
