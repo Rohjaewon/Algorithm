@@ -30,7 +30,7 @@ int pack(int start, int curW){
 
 void reconstruct(int capacity, int item, vector<int>& picked){
     if(item == n) return;
-    if(pack(item, capacity) == pack(item+1, capacity)){
+    if(pack(item, capacity) == pack(item+1, capacity)){//item을 넣지 않아도 넣은 것과 결과가 같다면 안넣는다.
         reconstruct(capacity, item+1, picked);
     } else {
         picked.push_back(item);
