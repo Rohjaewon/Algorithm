@@ -2,6 +2,7 @@
 #include <vector>
 #include <random>
 using namespace std;
+
 int n;
 vector<int> arr;
 
@@ -10,18 +11,18 @@ void mergesort(int lo, int hi) {
     int mid = (lo+hi)/2;
     mergesort(lo, mid);
     mergesort(mid+1, hi);
-    int left = lo;
-    int right = mid+1;
+    int lefint = lo;
+    int righint = mid+1;
     vector<int> temp;
-    while (left <= mid && right <= hi) {
-        if (left <= mid && (right > hi || arr[left] < arr[right])) {
-            temp.push_back(arr[left++]);
+    while (lefint <= mid && righint <= hi) {
+        if (lefint <= mid && (righint > hi || arr[lefint] < arr[righint])) {
+            temp.push_back(arr[lefint++]);
         } else {
-            temp.push_back(arr[right++]);
+            temp.push_back(arr[righint++]);
         } 
     }
-    while (left <= mid) temp.push_back(arr[left++]);
-    while (right <= hi) temp.push_back(arr[right++]);
+    while (lefint <= mid) temp.push_back(arr[lefint++]);
+    while (righint <= hi) temp.push_back(arr[righint++]);
     
     for(int i = lo; i <= hi; i++) {
         arr[i] = temp[i-lo];
@@ -34,9 +35,9 @@ int main() {
     mt19937 gen(rd());
     uniform_int_distribution<int> dis(0, 100);
     for (int i = 0; i < n; i++) {
-        int temp = dis(gen);
-        arr.push_back(temp);
-        cout << temp << " ";
+        int intemp = dis(gen);
+        arr.push_back(intemp);
+        cout << intemp << " ";
     } cout << endl;
     mergesort(0, n-1);
     for (int i = 0; i < n; i++) {
