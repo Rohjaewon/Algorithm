@@ -13,12 +13,12 @@ void getParenthesis(int open, int closed, string currentCase)
         return;
     }
 
-    for (int i = 1; i <= open; i++)
+    for (int willOpen = 1; willOpen <= open; willOpen++)
     {
-        for (int j = 1; j <= n - open + i - closed; j++)
+        for (int willClose = 1; willClose <= n - willOpen + willClose - closed; willClose++)
         {
-            string temp = genOpenString(i) + genCloseString(j);
-            getParenthesis(open - i, closed + j, currentCase + temp);
+            string temp = genOpenString(willOpen) + genCloseString(willClose);
+            getParenthesis(open - willOpen, closed + willClose, currentCase + temp);
         }
     }
 }
@@ -44,3 +44,17 @@ int main() {
         cout << formedCases[i] << " ";
     }
 }
+
+/*
+- 풀이과정
+getParenthesis(int open, int closed, string currentCase)
+open : 남은 열린 괄호의 개수
+closed : 닫힌 열린 괄호의 개수
+currentCase : 현재 괄호 상태
+열린 괄호는 open수만큼 추가할 수 있고 닫힌 괄호는 현재까지 괄호 중
+닫히지 않은 열린괄호의 개수 만큼 추가할 수 있다. 따라서 닫히지 않은
+열린 괄호의 개수는 현재를 포함하여 열린 괄호 개수(n-open+willOpen)에서 
+닫힌 괄호의 개수(closed)만큼 뺀 것이 닫히지 않을 괄호의 개수가 된다.
+각 단계마다 이런 방식으로 경우의 수를 계산하여 열린괄호와 닫힌괄호를 추가하는 작업을
+반복한다.
+*/
