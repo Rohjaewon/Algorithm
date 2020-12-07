@@ -7,26 +7,25 @@ int n;
 vector<int> arr;
 
 void mergesort(int lo, int hi) {
-    if (lo == hi) return;
-    int mid = (lo+hi)/2;
-    mergesort(lo, mid);
-    mergesort(mid+1, hi);
-    int lefint = lo;
-    int righint = mid+1;
-    vector<int> temp;
-    while (lefint <= mid && righint <= hi) {
-        if (lefint <= mid && (righint > hi || arr[lefint] < arr[righint])) {
-            temp.push_back(arr[lefint++]);
-        } else {
-            temp.push_back(arr[righint++]);
-        } 
-    }
-    while (lefint <= mid) temp.push_back(arr[lefint++]);
-    while (righint <= hi) temp.push_back(arr[righint++]);
-    
-    for(int i = lo; i <= hi; i++) {
-        arr[i] = temp[i-lo];
-    }
+   if (lo == hi) return;
+   int mid = (lo+hi)/2;
+   mergesort(lo, mid);
+   mergesort(mid+1, hi);
+   int left = lo;
+   int right = mid+1;
+   vector<int> temp;
+   while (left <= mid && right <= hi) {
+       if (arr[left] < arr[right]) {
+           temp.push_back(arr[left++]);
+       } else {
+           temp.push_back(arr[right++]);
+       }
+   }
+   while (left <= mid) temp.push_back(arr[left++]);
+   while (right <= hi) temp.push_back(arr[right++]);
+   for (int i = lo; i <= hi; i++) {
+       arr[i] = temp[i-lo];
+   }
 }
 
 int main() {
