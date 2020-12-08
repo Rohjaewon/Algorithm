@@ -6,29 +6,23 @@
  */
 #include <iostream>
 #include <vector>
+#include <algorithm>
 #include <time.h>
 using namespace std;
 int n = 0;
+const int NEGINF = numeric_limits<int>::min();
 vector<int> cache(101, -1);
 vector<int> arr(101, 0);
 vector<int> choices(101, -1);
 int LIS(int curr){
-	int& ret = cache[curr+1];
-	if(ret != -1) return ret;
+	int &ret = cache[curr+1];
+	int element = curr == -1 ? NEGINF : arr[curr+1];
 	ret = 1;
-	int bestNext = -1;
-	for (int next = curr + 1; next < n; next++)	{
-		int cand = -1;
-		if (curr == -1)
-			cand = LIS(next);
-		else if (arr[curr] < arr[next])
-			cand = LIS(next) + 1;
-		if (cand != -1 && cand > ret){
-			ret = cand;
-			bestNext = next;
+	for (int next = curr+1; next < n; next++) {
+		if (arr[next] > element) {
+			ret = max(ret, LIS(next)+1);
 		}
 	}
-	choices[curr+1] = bestNext;
 	return ret;
 }
 
@@ -54,4 +48,10 @@ int main(){
 		cout << endl;
 	}
 }
+
+/*
+- 해설
+LIS(int curr) : 현재 위치 curr일 때 가장 긴 증가 부분수열의 길이
+curr일 때 그 뒤에 있는 원소들 중 현재 값보다 큰 원소들을 한번씩 시도해봄.
+*/
 
