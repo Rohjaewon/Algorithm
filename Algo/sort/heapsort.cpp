@@ -16,7 +16,7 @@ void rebuild(int a[], int root, int size){
 	while(2*current+1< size){
 		int leftchild = 2*current+1;
 		int rightchild = leftchild+1;
-		int lowerchild;
+		int largerchild;
 		if(rightchild < size && a[rightchild] > a[leftchild]){//오른쪽 자식이 왼쪽 자식보다 클 때
 			largerchild = rightchild;
 		}
@@ -25,9 +25,9 @@ void rebuild(int a[], int root, int size){
 		}
 		if (a[current] < a[largerchild]) {
 			int temp = a[current];
-			a[current] = a[lowerchild];
-			a[lowerchild] = temp;
-			current = lowerchild;
+			a[current] = a[largerchild];
+			a[largerchild] = temp;
+			current = largerchild;
 		}
 		else break;
 	}//while
@@ -73,7 +73,8 @@ int main(){
 	return 0;
 }
 
-
+//minheap
+/* 
 #include <iostream>
 #include <time.h>
 using namespace std;
@@ -137,7 +138,7 @@ int main(){
 
 	return 0;
 }
-
+*/
 
 
 

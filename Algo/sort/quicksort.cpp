@@ -13,7 +13,7 @@ void swap(int left, int right) {
 }
 
 void quicksort(int lo, int hi) {
-	if (lo == hi || lo > hi) return;
+	if (lo >= hi) return;
 	int pivot = arr[lo];
 	int mid = (lo+hi)/2;
 	int left = lo+1;
