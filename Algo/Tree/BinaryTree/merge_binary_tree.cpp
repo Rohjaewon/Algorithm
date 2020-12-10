@@ -26,5 +26,5 @@ TreeNode* mergeTree(TreeNode* t1, TreeNode* t2) {
 새로운 tree 포인터를 하나 더 만들어서
 현재 노드의 값을 더한 후 새로운 포인터에 값을 넣어준 후,
 왼쪽 -> 오른쪽 순으로 tree를 병합한다. 이때, 두 트리 중에서
-한쪽이 null이면 null이 아닌 트리를 통째로 가리키게 한다.
+한쪽이 null이면 null이 아닌 트리를 통째로 가리키도록 한다.
 */
