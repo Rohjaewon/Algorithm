@@ -46,7 +46,9 @@ class queue {
             }
             node<T> *temp = queueStart;
             queueStart = queueStart->prev;
-            queueStart->next = nullptr;
+            if (queueStart != nullptr) {
+                queueStart->next = nullptr;
+            }
             size--;
             delete temp;
         }
